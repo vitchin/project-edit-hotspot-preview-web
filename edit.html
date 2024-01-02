@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit | Hotspot</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="/assets/css/edit-hotspot.css">
+</head>
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="hidden-section">
+            <section class="section">
+                <div class="container">
+                    <form method="post" action="" enctype="multipart/form-data">
+                    <div class="component is-three-fifths">
+                        <div class="control">
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="text" id="titulo" name="titulo" placeholder="Titulo" required>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="rd">
+                                <label>Logo:</label>
+                                <div class="file">
+                                    <label class="file-label">
+                                    <input class="file-input" type="file" name="image" id="image">
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                            Selecionar arquivo
+                                        </span>
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <textarea class="textarea" id="termcond" name="termcond" placeholder="Termos e condições" required></textarea>
+                        </div>
+
+                        <div class="field">
+                            <div class="component-toggle">
+                                <div id="facebook-toggle" class="toggle"></div>
+                                <label>Facebook</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="component-toggle">
+                                <div id="google-toggle" class="toggle"></div>
+                                <label>Google</label>
+                            </div>
+                        </div>
+
+                        <div class="columns is-centered is-mobile">
+                            <div class="upload-users">
+                                <div class="content is-normal is-centered">
+                                    <p>Baixe os usuários cadastrados <a href="#">Clique aqui</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="paint-button">
+                                <input type="color" id="color-button">
+                                <label>Cor do botão</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="section">
+
+            <div class="label-preview">
+                <h2 class="content is-size-5 has-text-centered has-text-weight-bold">Preview</h2>
+            </div>
+
+            <div class="line-preview">
+
+                <div class="head">
+                    <figure id="logo">
+                        <span id="after-end"></span>
+                    </figure>
+                </div>
+
+                <div class="container">
+                    
+                    <h2 id="titulo-preview" class="content is-size-5 has-text-centered has-text-weight-bold">Titulo</h2>
+
+                    <form method="post" action="">
+
+
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" id="fname" name="fname" placeholder="Nome" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" id="lname" name="lname" placeholder="Sobrenome" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" id="email" name="email" placeholder="Ex: Conta@email.com" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field" id="add-item-facebook">
+                            <div class='login-social'>
+                                <div class='login-facebook'>
+                                    <a href=''><img src="/assets/img/icons8-facebook-35.png">Sign in with Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field" id="add-item-google">
+                            <div class='login-social'>
+                                <div class='login-google'>
+                                    <a href=''><img src="/assets/img/icons8-google-plus-35.png">Sign in with Google</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="columns is-centered is-mobile">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <p class="term">
+                                        <input type="checkbox" required>
+                                        Eu concordo com os <a href="policy.php">Termos de uso</a></p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="buttons is-centered">
+                            <button id="button-save" class="button is-link">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="sh">
+                    <div class="toggle" id="show-or-hide"></div>
+                    <label>Ativar/Desativar</label>
+            </div>
+
+        </section>
+        </div>
+    </div>
+    <script src="./assets/js/edit-hotspot.js"></script>
+</body>
+</html>
